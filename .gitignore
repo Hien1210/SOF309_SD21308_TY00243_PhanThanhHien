@@ -33,3 +33,12 @@ HUONG_DAN_TRIEN_KHAI_ASSIGNMENT_GITHUB.md
 03-lecture-materials/
 05-ai-prompt-library/
 SOF304*
+
+
+# GameNest - bí mật & file cục bộ (KHÔNG đưa lên Git công khai)
+db.properties
+mail.properties
+cloudinary.properties
+*.env
+.smarttomcat/
+out/
