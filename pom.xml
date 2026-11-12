@@ -36,6 +36,16 @@
         </dependency>
 
         <!-- ============================================== -->
+        <!-- [Y3] MOCKITO: GIẢ LẬP DAO KHI TEST SERVICE    -->
+        <!-- ============================================== -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.11.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- ============================================== -->
         <!-- [Y4] SELENIUM WEBDRIVER CHO UI AUTOMATION     -->
         <!-- ============================================== -->
         <dependency>
@@ -129,6 +139,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
+                <configuration>
+                    <!-- Cho phép Mockito/ByteBuddy mock trên JDK mới hơn phiên bản
+                         Byte Buddy chính thức hỗ trợ (vô hại trên JDK 17 ở CI). -->
+                    <argLine>-Dnet.bytebuddy.experimental=true</argLine>
+                </configuration>
             </plugin>
         </plugins>
     </build>
